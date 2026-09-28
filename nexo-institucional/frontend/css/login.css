@@ -1,0 +1,139 @@
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 446px;
+  padding: 40px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(23, 63, 51, 0.08);
+  text-align: center;
+}
+
+.icono-marca {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 26px;
+  display: grid;
+  place-items: center;
+  background: var(--verde-oscuro);
+  color: var(--lima);
+  border-radius: 14px;
+}
+
+.icono-marca .icono {
+  width: 24px;
+  height: 24px;
+}
+
+.etiqueta--login {
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: #6f857c;
+}
+
+.titulo {
+  margin-bottom: 20px;
+  font-family: var(--fuente-titulo);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--verde-oscuro);
+}
+
+.descripcion {
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--texto-suave);
+}
+
+.campos-login {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.campo-grupo {
+  display: grid;
+  gap: 6px;
+}
+
+.campo-grupo > span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.campo {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--borde-fuerte);
+  border-radius: 12px;
+  background: var(--superficie);
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo:focus {
+  outline: none;
+  border-color: var(--verde-texto);
+  box-shadow: 0 0 0 3px rgba(47, 125, 97, 0.15);
+}
+
+.btn--login {
+  min-height: 40px;
+  font-size: 15px;
+}
+
+.btn--login.cargando::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: girar 0.7s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--rojo-texto);
+}
+
+.nota {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--texto-tenue);
+}
+
+.nota a {
+  color: var(--verde-texto);
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .tarjeta {
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+
+  .titulo {
+    font-size: 28px;
+  }
+}

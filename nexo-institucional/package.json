@@ -1,0 +1,27 @@
+{
+  "name": "nexo-institucional",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portal de gestión editorial institucional: revisión, publicación explícita e historial de versiones.",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "node backend/src/servidor.js",
+    "bd:iniciar": "node backend/scripts/iniciar-bd.js",
+    "bd:sembrar": "node backend/scripts/sembrar.js",
+    "usuario:crear": "node backend/scripts/crear-usuario.js",
+    "sitio:crear": "node backend/scripts/crear-sitio.js",
+    "test": "node --test --test-concurrency=1 \"pruebas/*.test.js\""
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.0"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}
